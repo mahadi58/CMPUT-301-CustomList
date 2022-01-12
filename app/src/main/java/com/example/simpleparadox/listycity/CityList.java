@@ -33,4 +33,38 @@ public class CityList {
         return list;
     }
 
+
+
+
+
+
+
+
+    /**
+     * delete a city if it's in the list or throw an error
+     * @param city
+     *      will check and delete a city if it's already there
+     */
+    public void deleteCity(City city) {
+        if(cities.contains(city)) {
+            cities.remove(city);
+        }
+        else {
+            throw new IllegalArgumentException();
+        }
+    }
+
+
+
+
+    /**
+     * it will return the number of city is cities list
+     * @return
+     *      number of city in the list
+     */
+    public int countNumberOfCity() {
+        return cities.size();
+    }
+
+
 }
